@@ -7,6 +7,7 @@
 (let ((default-directory (file-name-directory load-file-name)))
   (load (expand-file-name "core/packages.el"))
   (load (expand-file-name "core/windows.el"))
-  (load (expand-file-name "core/bindings.el"))
-  (load (expand-file-name "core/config.el")))
+  (load (expand-file-name "core/config.el")
+  (load (expand-file-name "core/buffer.el"))
+  (load (expand-file-name "core/bindings.el"))))
 
