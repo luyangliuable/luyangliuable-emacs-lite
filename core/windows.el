@@ -114,7 +114,6 @@ amount of redisplay; this is convenient on slow terminals."
   (split-window-right)
   (windmove-right))
 
-
 (defun edit-config-file ()
   "Switch to the config file"
   ())
