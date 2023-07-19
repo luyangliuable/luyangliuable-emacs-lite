@@ -105,7 +105,7 @@ amount of redisplay; this is convenient on slow terminals."
 (defun split-window-below-and-focus ()
   "Split the window vertically and focus the new window."
   (interactive)
-  (split-window-blow)
+  (split-window-below)
   (windmove-down))
 
 (defun split-window-right-and-focus ()

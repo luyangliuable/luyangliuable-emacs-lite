@@ -2,7 +2,7 @@
   (interactive)
   (switch-to-buffer "*scratch*"))
 
-(defun kill-this-buffer (&optional arg)
+(defun my-kill-this-buffer (&optional arg)
   "Kill the current buffer.
 If the universal prefix argument is used then kill also the window."
   (interactive "P")

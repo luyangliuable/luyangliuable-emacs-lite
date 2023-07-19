@@ -27,9 +27,12 @@
 (evil-leader/set-key "b s" 'switch-to-scratch)
 
 (evil-leader/set-key "w m" 'toggle-maximize-buffer)
-(evil-leader/set-key "b d" 'kill-this-buffer)
-(evil-leader/set-key "e R" 'eval-buffer)
-(evil-leader/set-key "e D" 'eval-buffer)
+(evil-leader/set-key "b d" 'my-kill-this-buffer)
+(evil-leader/set-key "f e R" 'eval-buffer)
+(evil-leader/set-key "f e D" 'eval-buffer)
+
+(evil-leader/set-key "f y d" 'copy-directory-path)
+(evil-leader/set-key "f y y" 'copy-file-path)
 
 (evil-leader/set-key "w L" 'evil-window-move-far-right)
 (evil-leader/set-key "w H" 'evil-window-move-far-left)
