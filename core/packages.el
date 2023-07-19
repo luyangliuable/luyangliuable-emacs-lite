@@ -5,7 +5,18 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-;; TODO: Automatically package install these files
+;; Declare packages
+;; TODO run package install before doing anything else
+(setq my-packages
+      '(evil
+        evil-leader
+        treemacs
+        which-key))
+
+;; Iterate on packages and install missing ones
+(dolist (pkg my-packages)
+  (unless (package-installed-p pkg)
+    (package-install pkg)))
 
 ;; Enable packages
 (require 'evil)
