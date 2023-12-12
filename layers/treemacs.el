@@ -6,6 +6,31 @@
     (setq treemacs-follow-mode t))
   (message "Treemacs follow mode: %s" (if treemacs-follow-mode "enabled" "disabled")))
 
+
+;; Stolen from spacemacs
+(defun treemacs--select-file-from-btn (btn prompt &optional dir-only)
+  "Select the file at BTN for file management.
+Offer a specifying dialogue with PROMPT when the button is flattened.
+Pick only directories when DIR-ONLY is non-nil."
+  (declare (side-effect-free t))
+  (let* ((path          (and btn (treemacs-button-get btn :path)))
+         (collapse-info (and btn (treemacs-button-get btn :collapsed)))
+         (is-str        (and path (stringp path)))
+         (is-dir        (and is-str (file-directory-p path)))
+         (is-file       (and is-str (file-regular-p path))))
+    (cond
+     (collapse-info
+      (completing-read prompt collapse-info nil :require-match))
+     (is-dir
+      path)
+     ((and is-file dir-only)
+      (treemacs--parent-dir path))
+     (is-file
+      path)
+     (t
+      (expand-file-name "~")))))
+
+
 ;; Stolen from spacemacs
 (defun treemacs-delete-file (&optional arg)
   "Delete node at point.
