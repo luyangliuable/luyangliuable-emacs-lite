@@ -3,6 +3,7 @@
 ;; 2. windows functions
 ;; 3. keybindings
 ;; 4. configs
+
 (let ((default-directory (file-name-directory load-file-name)))
   (load (expand-file-name "core/packages.el")))
 
@@ -11,11 +12,21 @@
   (unless (file-exists-p output-directory)
     (make-directory output-directory t))
   (byte-recompile-directory default-directory 0 t)
-  (dolist (file '("core/windows.el"
+  (dolist (file '("core/load.el"
+
                   "core/funcs.el"
                   "core/config.el"
+
+		  "core/functions/window.el"
+                  "core/functions/file.el"
+                  "core/functions/buffer.el"
+
                   "core/buffer.el"
-                  "core/bindings.el"))
+                  "core/bindings.el"
+
+                  "layers/tide.el"
+                  "layers/treemacs.el"
+		  ))
     (let* ((source-file (expand-file-name file))
            (compiled-file (concat source-file "c"))
            (output-file (concat (file-name-as-directory output-directory)

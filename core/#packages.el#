@@ -1,7 +1,6 @@
 ;; Enable package management
 (require 'package)
 (setq package-enable-at-startup nil) ; Avoid initializing twice
-(setq image-types '(svg png gif tiff jpeg xpm xbm pbm))
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
@@ -10,11 +9,8 @@
 (setq my-packages
       '(evil
         evil-leader
-	tide
         treemacs
 	lsp-mode
-	company
-	highlight-symbol
         which-key))
 
 ;; Iterate on packages and install missing ones
@@ -32,8 +28,7 @@
 
 ;; hooks
 (add-hook 'typescript-mode-hook #'lsp)
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
-(add-hook 'after-init-hook 'global-company-mode)
+
 
 ;; Enable modes
 (evil-mode 1)
