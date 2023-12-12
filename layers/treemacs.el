@@ -65,4 +65,5 @@ they will instead be wiped irreversibly."
     (kbd "ts") 'treemacs-visit-node-horizontal-split
     (kbd "tS") 'treemacs-visit-node-vertical-split
     (kbd "to") 'treemacs-select-window
+    (kbd "H") 'treemacs-collapse-parent-node
     (kbd "tg") 'treemacs-project-goto)
