@@ -26,6 +26,7 @@
 
                   "layers/tide.el"
                   "layers/treemacs.el"
+                  "layers/typescript.el"
 		  ))
     (let* ((source-file (expand-file-name file))
            (compiled-file (concat source-file "c"))

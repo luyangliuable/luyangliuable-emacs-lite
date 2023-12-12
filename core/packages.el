@@ -31,8 +31,6 @@
 (require 'display-line-numbers) ;; may not be necessray if it after emacs version 16
 
 ;; hooks
-(add-hook 'typescript-mode-hook #'lsp)
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Enable modes
