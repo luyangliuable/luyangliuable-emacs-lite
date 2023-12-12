@@ -49,7 +49,11 @@ This project is licensed under the MIT License.
 
 
 ## Roadmap
+  * [ ] Set up basics
+  * [ ] Set up lsp
+  * [ ] Set up git tools
   * [ ] Set up shell
+  * [ ] Set up treemacs macros
   * [ ] Optimise editor speed
   * [ ] Set up magit
   * [ ] Set up modeline

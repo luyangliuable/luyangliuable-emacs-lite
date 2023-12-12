@@ -15,8 +15,32 @@
 (evil-leader/set-key "TAB" 'switch-to-previous-buffer)
 
 ;; Window bindings
-(evil-leader/set-key "w V" 'split-window-right)
+(evil-leader/set-key "w v" 'split-window-right)
+(evil-leader/set-key "w V" 'split-window-right-and-focus)
+(evil-leader/set-key "w s" 'split-window-below)
+(evil-leader/set-key "w S" 'split-window-below-and-focus)
+(evil-leader/set-key "w S" 'split-window-below-and-focus)
+(evil-leader/set-key "w d" 'delete-window)
+
+;; Move between window bindings
 (evil-leader/set-key "w l" 'evil-window-right)
 (evil-leader/set-key "w h" 'evil-window-left)
 (evil-leader/set-key "w k" 'evil-window-up)
 (evil-leader/set-key "w j" 'evil-window-down)
+(evil-leader/set-key "b s" 'switch-to-scratch)
+
+;; Buffers
+(evil-leader/set-key "w m" 'toggle-maximize-buffer)
+(evil-leader/set-key "b d" 'my-kill-this-buffer)
+(evil-leader/set-key "f e R" 'eval-buffer)
+(evil-leader/set-key "f e d" 'open-my-init-file)
+
+(evil-leader/set-key "f y d" 'copy-directory-path)
+(evil-leader/set-key "f y y" 'copy-file-path)
+
+(evil-leader/set-key "w L" 'evil-window-move-far-right)
+(evil-leader/set-key "w H" 'evil-window-move-far-left)
+
+(evil-leader/set-key "t n r" 'enable-relative-line-no)
+
+;; Files
