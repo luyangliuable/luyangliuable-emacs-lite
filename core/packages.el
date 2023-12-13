@@ -35,4 +35,5 @@
 
 ;; Enable modes
 (evil-mode 1)
+(evil-leader-mode 1)
 (tool-bar-mode -1)

@@ -6,6 +6,8 @@
 (defvar-local mode-line-rflog nil
   "Toggle switch for mode-line display.")
 
+(which-key-mode 1)
+
 (defun toggle-mode-line ()
   "Toggle Emacs modeline.
 https://emacs.stackexchange.com/questions/74789/toggle-the-display-of-the-mode-line"
@@ -21,3 +23,6 @@ https://emacs.stackexchange.com/questions/74789/toggle-the-display-of-the-mode-l
   (message "Mode line: %s" (if mode-line-format "enable" "disabled")))
 
 (evil-leader/set-key "t m T" 'toggle-mode-line)
+
+;; Enable modes
+(tool-bar-mode -1)

@@ -22,12 +22,13 @@
                   "core/functions/buffer.el"
 
                   "core/buffer.el"
-                  "core/bindings.el"
 
                   "layers/tide.el"
                   "layers/treemacs.el"
                   "layers/typescript.el"
-		  ))
+                  "layers/evil.el"
+
+                  "core/bindings.el"))
     (let* ((source-file (expand-file-name file))
            (compiled-file (concat source-file "c"))
            (output-file (concat (file-name-as-directory output-directory)
@@ -35,3 +36,6 @@
       (when (file-exists-p compiled-file)
         (rename-file compiled-file output-file t)
         (load output-file t t)))))
+
+
+(evil-leader/set-key "b d" 'my-kill-this-buffer)

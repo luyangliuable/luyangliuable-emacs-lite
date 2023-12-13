@@ -6,6 +6,7 @@
 
 ;; Set space as the leader key
 (setq evil-leader/leader "SPC")
+
 (global-evil-leader-mode)
 
 ;; Bind space f t to toggle Treemacs
@@ -43,4 +44,5 @@
 
 (evil-leader/set-key "t n r" 'enable-relative-line-no)
 
-;; Files
+;; Line Number
+(evil-leader/set-key "t m T" 'toggle-mode-line)
