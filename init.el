@@ -7,6 +7,7 @@
 (let ((default-directory (file-name-directory load-file-name)))
   (load (expand-file-name "core/packages.el")))
 
+
 (let* ((default-directory (file-name-directory load-file-name))
        (output-directory (expand-file-name "bin" default-directory)))
   (unless (file-exists-p output-directory)
@@ -17,16 +18,18 @@
                   "core/funcs.el"
                   "core/config.el"
 
-		  "core/functions/window.el"
+                  "core/functions/window.el"
                   "core/functions/file.el"
                   "core/functions/buffer.el"
+                  "core/functions/modes.el"
 
                   "core/buffer.el"
 
-                  "layers/tide.el"
                   "layers/treemacs.el"
-                  "layers/typescript.el"
                   "layers/evil.el"
+                  "layers/helm.el"
+                  "layers/tide.el"
+                  "layers/typescript.el"
 
                   "core/bindings.el"))
     (let* ((source-file (expand-file-name file))
@@ -38,4 +41,4 @@
         (load output-file t t)))))
 
 
-(evil-leader/set-key "b d" 'my-kill-this-buffer)
+(show-active-minor-mode-list)

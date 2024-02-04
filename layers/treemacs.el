@@ -85,6 +85,8 @@ they will instead be wiped irreversibly."
     (kbd "R") 'treemacs-rename-file
     (kbd "d") 'treemacs-delete-file
     (kbd "tn") 'treemacs-create
+    (kbd "cf") 'treemacs-create-file
+    (kbd "cd") 'treemacs-create-dir
     (kbd "ta") 'treemacs-add-project-to-workspace
     (kbd "tc") 'treemacs-collapse-all
     (kbd "ts") 'treemacs-visit-node-horizontal-split

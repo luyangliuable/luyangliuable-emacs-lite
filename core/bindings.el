@@ -11,8 +11,6 @@
 
 ;; Bind space f t to toggle Treemacs
 (evil-leader/set-key "ft" 'treemacs)
-
-
 (evil-leader/set-key "TAB" 'switch-to-previous-buffer)
 
 ;; Window bindings
@@ -42,7 +40,37 @@
 (evil-leader/set-key "w L" 'evil-window-move-far-right)
 (evil-leader/set-key "w H" 'evil-window-move-far-left)
 
+;; Line Number
 (evil-leader/set-key "t n r" 'enable-relative-line-no)
 
-;; Line Number
+;; Mode Line
 (evil-leader/set-key "t m T" 'toggle-mode-line)
+(evil-leader/set-key "t m p" 'show-active-minor-mode-list)
+
+
+;; Save current file while in normal mode and RET.
+(define-key evil-normal-state-map (kbd "<RET>") 'save-buffer)
+
+
+(setq mode-line-format (list (when (vc-registered (buffer-file-name)) (vc-mode vc-mode))))
+
+(let ((standard-mode-line-format
+       (list "%e"
+	     "%l"
+	     'mode-line-front-space
+	     'mode-line-mule-info
+	     'mode-line-client
+	     'mode-line-modified
+	     'mode-line-remote
+	     'mode-line-frame-identification
+	     'mode-line-buffer-identification
+	     "   "
+	     'mode-line-position
+	     '(vc-mode vc-mode)
+	     "  "
+	     'mode-line-modes
+	     'mode-line-misc-info
+	     'mode-line-end-spaces)))
+  (setq mode-line-format standard-mode-line-format))
+
+(setq mode-line-format (list mode-line-modes))

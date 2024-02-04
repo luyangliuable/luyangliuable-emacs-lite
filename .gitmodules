@@ -1,0 +1,3 @@
+[submodule "layers/use-package"]
+	path = layers/use-package
+	url = https://github.com/jwiegley/use-package.git

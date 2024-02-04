@@ -1,0 +1,6 @@
+(defun show-active-minor-mode-list ()
+  (switch-to-buffer-other-window "*test*")
+  (erase-buffer)
+  (dolist (i minor-mode-list)
+    (if (symbol-value i)
+	(insert (format "%s " i)))))
